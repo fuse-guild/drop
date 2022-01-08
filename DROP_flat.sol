@@ -1,9 +1,3 @@
-
-// File: contracts/Context.sol
-
-
-// OpenZeppelin Contracts v4.4.1 (utils/Context.sol)
-
 pragma solidity ^0.8.4;
 
 /**
@@ -25,13 +19,6 @@ abstract contract Context {
         return msg.data;
     }
 }
-// File: contracts/Ownable.sol
-
-
-// OpenZeppelin Contracts v4.4.1 (access/Ownable.sol)
-
-pragma solidity ^0.8.4;
-
 
 /**
  * @dev Contract module which provides a basic access control mechanism, where
@@ -102,12 +89,6 @@ abstract contract Ownable is Context {
         emit OwnershipTransferred(oldOwner, newOwner);
     }
 }
-// File: contracts/IERC20.sol
-
-
-// OpenZeppelin Contracts v4.4.1 (token/ERC20/IERC20.sol)
-
-pragma solidity ^0.8.4;
 
 /**
  * @dev Interface of the ERC20 standard as defined in the EIP.
@@ -186,13 +167,6 @@ interface IERC20 {
      */
     event Approval(address indexed owner, address indexed spender, uint256 value);
 }
-// File: contracts/IERC20Metadata.sol
-
-
-// OpenZeppelin Contracts v4.4.1 (token/ERC20/extensions/IERC20Metadata.sol)
-
-pragma solidity ^0.8.4;
-
 
 /**
  * @dev Interface for the optional metadata functions from the ERC20 standard.
@@ -215,15 +189,6 @@ interface IERC20Metadata is IERC20 {
      */
     function decimals() external view returns (uint8);
 }
-// File: contracts/ERC20.sol
-
-
-// OpenZeppelin Contracts v4.4.1 (token/ERC20/ERC20.sol)
-
-pragma solidity ^0.8.4;
-
-
-
 
 /**
  * @dev Implementation of the {IERC20} interface.
@@ -592,21 +557,7 @@ contract ERC20 is Context, IERC20, IERC20Metadata {
         uint256 amount
     ) internal virtual {}
 }
-// File: contracts/DROP.sol
 
-
-/*           
-
-In the midst of life we are in debt,
-and so on, and so forth,
-and you can finish the list yourself.
-                            
-*/
-pragma solidity 0.8.4;
-
-
-
-/// @custom:security-contact keir@thinklair.com
 contract DROP is ERC20, Ownable {
 
     constructor() ERC20("DROP token", "DROP") {}
